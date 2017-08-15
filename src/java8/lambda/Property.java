@@ -3,7 +3,6 @@ package java8.lambda;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -171,7 +170,7 @@ public class Property {
         System.out.println();
         Consumer consumer = (i) -> System.out.print(" |" + i);
         properties.stream().forEach(consumer);
-        Function<Property, Property> f = i -> new Property(i.name, i.distance+2001, i.sales, i.priceLevel);
+        Function<Property, Property> f = i -> new Property(i.name, i.distance + 2001, i.sales, i.priceLevel);
         Predicate<Property> p = i -> i.distance >= 5000;
         properties.stream().map(f).forEach(consumer);
         System.out.println();

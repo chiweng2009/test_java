@@ -7,6 +7,7 @@ public class Test {
     private static class Instance {
         public static Test t = new Test();
     }
+
     public static Test getInstance() {
         return Instance.t;
     }

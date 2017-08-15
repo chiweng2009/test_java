@@ -5,33 +5,33 @@ package testAbstract;
  */
 abstract class Parent {
 
-  public Parent() {
-    print();
-  }
+    public Parent() {
+        print();
+    }
 
-  abstract void print();
+    abstract void print();
 }
 
 
 class A extends Parent {
 
-  int i = 1;
+    int i = 1;
 
-  public A() {
-    System.out.println("A() " + i);
-  }
+    public A() {
+        System.out.println("A() " + i);
+    }
 
-  @Override
-  void print() {
-    System.out.println("print() " + i);
-  }
+    @Override
+    void print() {
+        System.out.println("print() " + i);
+    }
 }
 
 
 public class AbstractClassTest {
 
-  public static void main(String[] args) {
-    A a = new A();
-    a.print();
-  }
+    public static void main(String[] args) {
+        A a = new A();
+        a.print();
+    }
 }
